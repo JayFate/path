@@ -6,3 +6,4 @@ index.mjs
 index.min.js
 
 build
+*.tgz

@@ -1,5 +1,5 @@
 {
-  "name": "path2",
+  "name": "@jayfate/path",
   "version": "0.0.4",
   "description": "",
   "main": "build/index.js",
@@ -24,12 +24,11 @@
     "prepublishOnly": "npm run generate"
   },
   "keywords": [
-    "test",
-    "module",
-    "uodule"
+    "path",
+    "windows"
   ],
   "repository": {
-    "url": "https://github.com/JayFate/path2"
+    "url": "https://github.com/JayFate/path"
   },
   "author": "JayFate",
   "license": "MIT",
