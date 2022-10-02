@@ -1,0 +1,48 @@
+{
+  "name": "path2",
+  "version": "0.0.4",
+  "description": "",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "exports": {
+    "import": "./build/index.mjs",
+    "default": "./build/index.js"
+  },
+  "unpkg": "build/index.min.js",
+  "files": [
+    "build/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "ts-node src/index.ts",
+    "es": "tsc",
+    "build": "rollup -c",
+    "generate": "npm run clean && npm run es && npm run build",
+    "clean": "rimraf index.*",
+    "prepublishOnly": "npm run generate"
+  },
+  "keywords": [
+    "test",
+    "module",
+    "uodule"
+  ],
+  "repository": {
+    "url": "https://github.com/JayFate/path2"
+  },
+  "author": "JayFate",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@types/node": "^18.7.23",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.78.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  }
+}
