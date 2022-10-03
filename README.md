@@ -1,21 +1,29 @@
-## 关于模块导出文件
+# @jayfate/path
 
-[ES6入门 - 模块章节](https://es6.ruanyifeng.com/#docs/module-loader#ES6-%E6%A8%A1%E5%9D%97%E4%B8%8E-CommonJS-%E6%A8%A1%E5%9D%97%E7%9A%84%E5%B7%AE%E5%BC%82)
+跨端的 `path` 模块，在 Windows/MacOS/Linux 均以 `/` 作为路径分隔符进行路径解析及返回解析后的路径。
 
-```json
-{
-    // 兼容旧版的 CommonJs
-    "main": "utils.js",
-    // exports 优先级高于 main, 只有支持 ES6 的 Nodejs 才认识该字段
-    "exports": {
-        "import": "./index.mjs",
-        "default": ".index.js"
-    }
-}/;
+### 安装
+
+安装 `@jayfate/path`
+
+```sh
+npm install -S @jayfate/path
 ```
 
-[Dual CommonJS/ES module packages](https://nodejs.org/api/packages.html#dual-commonjses-module-packages)
+### 使用
 
-根据 Nodejs 官方文档的解释
+```js
+const path = require("@jayfate/path");
+const os = require("os")
 
-package.json 中 module 字段并不被 Nodejs 所识别，只能被一些构建工具所识别
+// win32
+console.log(os.platform())
+
+// D:/Documents/code/jayfate/test
+console.log(path.resolve(__dirname, "test"));
+
+// /
+console.log(path.sep)
+```
+
+[反馈问题](https://github.com/JayFate/path/issues)

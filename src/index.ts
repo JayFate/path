@@ -10,7 +10,7 @@ const replaceStr = (str: string) => str.replace(/\\/gm, '/')
 const isFunction = (o: any) => typeof o === "function"
 const isString = (o: any) => typeof o === "string"
 
-console.log(Object.keys(path))
+// console.log(Object.keys(path))
 
 for (const key in path) {
     // console.log(`key`, key, `typeof path[key]`, typeof path[key])
