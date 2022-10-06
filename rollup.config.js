@@ -40,7 +40,7 @@ const config = defineConfig([
         },
         plugins: [
             typescript({
-                declaration: false
+                declaration: true
             })
         ]
     },
