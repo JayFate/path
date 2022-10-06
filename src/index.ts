@@ -4,7 +4,7 @@
 import path, { PlatformPath } from "path";
 // const path = require("path")
 
-const replaceStr = (str: string): string => str.replace(/\\/gm, '/')
+const replaceStr = (str: string): string => (str || "").replace(/\\/gm, '/')
 const isFunction = (o: any) => typeof o === "function"
 const isString = (o: any) => typeof o === "string"
 
