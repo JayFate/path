@@ -26,7 +26,7 @@ export const normalize: typeof path.normalize = wrap(path.normalize)
 export const isAbsolute: typeof path.isAbsolute = wrap(path.isAbsolute)
 export const join: typeof path.resolve = wrap(path.join)
 export const relative: typeof path.relative = wrap(path.relative)
-export const toNamespacedPath: typeof path.toNamespacedPath = wrap(path.toNamespacedPath)
+// export const toNamespacedPath: typeof path.toNamespacedPath = wrap(path.toNamespacedPath)
 export const dirname: typeof path.dirname = wrap(path.dirname)
 export const basename: typeof path.basename = wrap(path.basename)
 export const extname: typeof path.extname = wrap(path.extname)
@@ -34,8 +34,8 @@ export const format: typeof path.format = wrap(path.format)
 export const parse: typeof path.parse = wrap(path.parse)
 export const sep = "/"
 export const delimiter: typeof path.delimiter = path.delimiter
-export const win32: typeof path.win32 = path.win32
-export const posix: typeof path.posix = path.posix
+// export const win32: typeof path.win32 = path.win32
+// export const posix: typeof path.posix = path.posix
 
 
 // console.log(Object.keys(path))
@@ -45,7 +45,7 @@ const path2 = {
     isAbsolute,
     join,
     relative,
-    toNamespacedPath,
+    // toNamespacedPath,
     dirname,
     basename,
     extname,
@@ -53,8 +53,8 @@ const path2 = {
     parse,
     sep,
     delimiter,
-    win32,
-    posix,
+    // win32,
+    // posix,
 }
 
 // for (const key in path) {
