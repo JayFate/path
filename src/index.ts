@@ -76,6 +76,6 @@ const path2 = {
 //     }
 // }
 
-module.exports = path2
+// module.exports = path2
 
 export default path2

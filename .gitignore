@@ -7,3 +7,5 @@ index.min.js
 
 build
 *.tgz
+bbdl
+test.*

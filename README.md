@@ -12,6 +12,8 @@ npm install -S @jayfate/path
 
 ### 使用
 
+cjs:
+
 ```js
 const path = require("@jayfate/path");
 const os = require("os")
@@ -24,6 +26,17 @@ console.log(path.resolve(__dirname, "test"));
 
 // /
 console.log(path.sep)
+```
+
+esm:
+
+```js
+import path, { resolve } from "@jayfate/path";
+
+// /Users/jayfate/Documents/code/bbdl/bbdl/test
+console.log(path.resolve("/Users/jayfate/Documents/code/bbdl/bbdl", "test"))
+// /Users/jayfate/Documents/code/bbdl/bbdl/test
+console.log(resolve("/Users/jayfate/Documents/code/bbdl/bbdl", "test"))
 ```
 
 [反馈问题](https://github.com/JayFate/path/issues)

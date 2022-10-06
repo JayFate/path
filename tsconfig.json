@@ -2,7 +2,7 @@
   /* Visit https://aka.ms/tsconfig to read more about this file */
   "compilerOptions": {
     "target": "ESNext",
-    "module": "commonjs",
+    "module": "ESNext",
     "declaration": true,
     "emitDeclarationOnly": true,
     "declarationDir": "types",
