@@ -7,6 +7,7 @@ import path, { PlatformPath } from "path";
 const replaceStr = (str: string): string => (str || "").replace(/\\/gm, '/')
 const isFunction = (o: any) => typeof o === "function"
 const isString = (o: any) => typeof o === "string"
+const isObject = (o: any) => typeof o === "object"
 
 /**
 wrap 方法接收函数 fn，并返回一个包装后的函数 fn1，fn1 与 fn 的接口完全相同
@@ -16,7 +17,15 @@ const wrap = (fn: any) => {
     return function (...argus: any[]) {
         argus = argus.map(str => replaceStr(str))
         let res = fn(...argus)
-        res = replaceStr(res)
+        if (isString(res)) {
+            res = replaceStr(res)
+        } else if (isObject(res)) {
+            for (const key in res) {
+                if (isString(res[key])) {
+                    res[key] = replaceStr(res[key])
+                }
+            }
+        }
         return res
     }
 }
