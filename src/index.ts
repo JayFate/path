@@ -76,7 +76,7 @@ const path2 = {
     isAbsolute,
     join,
     relative,
-    // toNamespacedPath,
+    toNamespacedPath,
     dirname,
     basename,
     extname,
@@ -84,8 +84,8 @@ const path2 = {
     parse,
     sep,
     delimiter,
-    // win32,
-    // posix,
+    win32,
+    posix,
 }
 
 
