@@ -66,7 +66,7 @@ export const parse: typeof path.parse = wrap(path.parse)
 export const sep = "/"
 export const delimiter: typeof path.delimiter = path.delimiter
 export const win32: typeof path.win32 = (isWin32 ? handleArgu(path.win32 as any) : {}) as unknown as typeof path.win32
-export const posix: typeof path.posix = (isWin32 ? handleArgu(path.posix as any) : {}) as unknown as typeof path.posix
+export const posix: typeof path.posix = (handleArgu(path.posix as any)) as unknown as typeof path.posix
 
 
 // console.log(Object.keys(path))

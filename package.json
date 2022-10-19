@@ -1,6 +1,6 @@
 {
   "name": "@jayfate/path",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "The cross-platform `path` module. Uses `/` as the path separator for path parsing  and returned values on `Windows/MacOS/Linux`.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
