@@ -1,5 +1,6 @@
 import path from "path";
 import os from "os"
+import { cloneDeep } from "lodash-es";
 // const path = require("path")
 
 const replaceStr = (str: string): string => (str || "").replace(/\\/gm, '/')
@@ -32,7 +33,8 @@ const handleArgu = (e: string | rec) => {
 }
 
 const wrap = (fn: any) => {
-    return function (...argus: any[]) {
+    return function (..._argus: any[]) {
+        let argus = cloneDeep(_argus)
         argus = argus.map(e => handleArgu(e))
         let res = fn(...argus)
         res = handleArgu(res)

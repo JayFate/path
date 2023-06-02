@@ -35,7 +35,7 @@ declare const path2: {
     relative: (from: string, to: string) => string;
     toNamespacedPath: (path: string) => string;
     dirname: (path: string) => string;
-    basename: (path: string, suffix?: string | undefined) => string;
+    basename: (path: string, ext?: string | undefined) => string;
     extname: (path: string) => string;
     format: (pathObject: path.FormatInputPathObject) => string;
     parse: (path: string) => path.ParsedPath;
