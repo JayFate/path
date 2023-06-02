@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "@jayfate/path": "0.0.13"
+  },
+  "changesets": []
+}

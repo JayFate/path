@@ -21,7 +21,9 @@
     "build": "rollup -c",
     "generate": "npm run clean && npm run es && npm run build",
     "clean": "rimraf index.*",
-    "prepublishOnly": "npm run generate"
+    "prepublishOnly": "npm run generate",
+    "changeset": "changeset",
+    "version-packages": "changeset version"
   },
   "keywords": [
     "path",
@@ -33,6 +35,7 @@
   "author": "JayFate",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
     "@rollup/plugin-typescript": "^8.3.4",
     "@types/jest": "^29.2.0",
     "@types/lodash-es": "^4.17.7",
