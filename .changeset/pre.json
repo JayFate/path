@@ -4,5 +4,8 @@
   "initialVersions": {
     "@jayfate/path": "0.0.13"
   },
-  "changesets": []
+  "changesets": [
+    "angry-boats-suffer",
+    "green-starfishes-report"
+  ]
 }

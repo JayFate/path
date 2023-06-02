@@ -1,0 +1,5 @@
+---
+"@jayfate/path": patch
+---
+
+fix

@@ -1,6 +1,6 @@
 {
   "name": "@jayfate/path",
-  "version": "0.0.13",
+  "version": "0.0.14-beta.1",
   "description": "The cross-platform `path` module. Uses `/` as the path separator for path parsing  and returned values on `Windows/MacOS/Linux`.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -23,7 +23,9 @@
     "clean": "rimraf index.*",
     "prepublishOnly": "npm run generate",
     "changeset": "changeset",
-    "version-packages": "changeset version"
+    "version-packages": "changeset version",
+    "release": "pnpm generate && pnpm release:only",
+    "release:only": "changeset publish --registry=https://registry.npmjs.com/"
   },
   "keywords": [
     "path",
